@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Widget Testing HTML</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+  <style>
+    html,
+    body {
+      height: 100vh;
+      width: 100vw;
+      background-color: black;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column align-items-start h-100 w-100">
+  <button class="pjuge btn btn-sm btn-light" id="widgetID" data-hnkb-id="EP-005">005</button>
+  <button class="pjuge btn btn-sm btn-light" id="widgetID2" data-hnkb-id="EP-003">003</button>
+  <script src="https://fanta.hellonext.co/widget.js"></script>
+<script>
+  HNWidget.init({
+    token: "EWJxucjg30LQNbneQ_zC0w",
+    // Optional: This token allows the widget to uniquely identify your user. Without the token, the user will have to enter his email to submit a post.
+    selector: "#widgetID", // Optional: Widget will open up when this element is clicked
+    placement: "right", // Optional: Placement of the element when selector is used
+    showOnlySubmission: false, // Optional: Toggle for showing only submission form
+  });
+</script>
+
+<script>
+HNWidget.init({
+    token: "EWJxucjg30LQNbneQ_zC0w",
+    selector: "#widgetID", // Widget will open up when this element is clicked
+    widget:"changelog",
+    enableIndicator: true, // Optional: Enables an indicator if a new update has been posted in last 7 days
+  });
+</script>
+</body>
+
+</html>
